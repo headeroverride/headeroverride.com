@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GuideDropdown from "../GuideDropdown";
 
 const githubUrl = "https://github.com/headeroverride/headeroverride";
 const linkedInUrl =
@@ -74,12 +75,7 @@ export default function ContactPage() {
             <a className="nav-link" href="/">
               Home
             </a>
-            <a className="nav-link" href="/privacy">
-              Privacy
-            </a>
-            <a className="nav-link" href="/contact">
-              Contact
-            </a>
+            <GuideDropdown />
             <a
               className="nav-link"
               href={githubUrl}
@@ -95,6 +91,9 @@ export default function ContactPage() {
               rel="noreferrer"
             >
               YouTube
+            </a>
+            <a className="nav-link" href="/contact">
+              Contact
             </a>
           </div>
         </nav>

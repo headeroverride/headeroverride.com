@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GuideDropdown from "../GuideDropdown";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -58,12 +59,7 @@ export default function PrivacyPage() {
             <a className="nav-link" href="/">
               Home
             </a>
-            <a className="nav-link" href="/privacy">
-              Privacy
-            </a>
-            <a className="nav-link" href="/contact">
-              Contact
-            </a>
+            <GuideDropdown />
             <a
               className="nav-link"
               href="https://github.com/headeroverride/headeroverride"
@@ -79,6 +75,9 @@ export default function PrivacyPage() {
               rel="noreferrer"
             >
               YouTube
+            </a>
+            <a className="nav-link" href="/contact">
+              Contact
             </a>
           </div>
         </nav>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import InstallButton from "../InstallButton";
+import GuideDropdown from "../GuideDropdown";
 
 const pageUrl = "https://headeroverride.com/modheader-alternative";
 const pageDescription =
@@ -138,12 +139,7 @@ export default function ModHeaderAlternativePage() {
           <a className="nav-link" href="/">
             Home
           </a>
-          <a className="nav-link" href="/privacy">
-            Privacy
-          </a>
-          <a className="nav-link" href="/contact">
-            Contact
-          </a>
+          <GuideDropdown />
           <a
             className="nav-link"
             href="https://github.com/headeroverride/headeroverride"
@@ -159,6 +155,9 @@ export default function ModHeaderAlternativePage() {
             rel="noreferrer"
           >
             YouTube
+          </a>
+          <a className="nav-link" href="/contact">
+            Contact
           </a>
         </div>
       </nav>

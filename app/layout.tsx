@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import SiteFooter from "./SiteFooter";
 
 const siteUrl = "https://headeroverride.com";
 const siteDescription =
@@ -31,6 +32,16 @@ export const metadata: Metadata = {
     "alternative to ModHeader",
     "open source ModHeader alternative",
     "open source header extension",
+    "edit headers in browser",
+    "modify header extension",
+    "browser extension to modify headers",
+    "chrome extension to modify headers",
+    "browser extension to edit headers",
+    "Chrome extension to modify cookies",
+    "edit headers",
+    "edit cookies",
+    "inject headers",
+    "try header override",
     "request header extension",
     "browser modify header extension",
     "modify header browser extension",
@@ -105,7 +116,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}<SiteFooter /></body>
     </html>
   );
 }

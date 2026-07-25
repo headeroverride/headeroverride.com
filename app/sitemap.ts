@@ -34,6 +34,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9
     },
     {
+      url: `${baseUrl}/guides/api-works-postman-fails-browser`,
+      lastModified: latestContentModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
+      url: `${baseUrl}/guides/api-returns-401-after-login`,
+      lastModified: latestContentModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
+      url: `${baseUrl}/guides/debug-cors-preflight-requests`,
+      lastModified: latestContentModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
+      url: `${baseUrl}/guides/debug-with-header-profiles`,
+      lastModified: latestContentModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
+      url: `${baseUrl}/guides/test-admin-permissions-browser`,
+      lastModified: latestContentModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
       url: `${baseUrl}/privacy`,
       lastModified: latestContentModified,
       changeFrequency: "yearly",

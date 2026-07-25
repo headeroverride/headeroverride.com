@@ -1,6 +1,7 @@
 import ScreenshotSwiper from "./ScreenshotSwiper";
 import InstallButton from "./InstallButton";
 import WorkflowSwiper from "./WorkflowSwiper";
+import GuideDropdown from "./GuideDropdown";
 import { storeLinks, withWebsiteUtm } from "./storeLinks";
 
 const features = [
@@ -191,12 +192,7 @@ export default function Home() {
             <a className="nav-link" href="/">
               Home
             </a>
-            <a className="nav-link" href="/privacy">
-              Privacy
-            </a>
-            <a className="nav-link" href="/contact">
-              Contact
-            </a>
+            <GuideDropdown />
             <a
               className="nav-link"
               href="https://github.com/headeroverride/headeroverride"
@@ -212,6 +208,9 @@ export default function Home() {
               rel="noreferrer"
             >
               YouTube
+            </a>
+            <a className="nav-link" href="/contact">
+              Contact
             </a>
           </div>
         </nav>
