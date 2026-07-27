@@ -10,7 +10,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ["debug CORS preflight", "OPTIONS request CORS", "edit headers in browser", "CORS debugging", "chrome extension to modify headers", "browser extension to edit headers", "Chrome extension to modify cookies", "edit headers", "edit cookies", "inject headers"],
+  keywords: ["debug CORS preflight requests", "CORS preflight debugging", "OPTIONS request CORS", "allowed headers CORS", "CORS credentials debugging", "modify request headers for CORS testing"],
   alternates: { canonical: "/guides/debug-cors-preflight-requests" },
   openGraph: {
     title: `${title} | Header Override`, description, url: pageUrl,

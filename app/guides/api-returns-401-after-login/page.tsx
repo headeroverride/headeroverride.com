@@ -11,17 +11,13 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "modify header extension",
-    "browser extension to modify headers",
-    "chrome extension to modify headers",
-    "browser extension to edit headers",
-    "Chrome extension to modify cookies",
-    "edit headers",
-    "edit cookies",
-    "inject headers",
-    "edit headers in browser",
-    "debug 401 after login",
-    "authentication cookie debugging"
+    "api returns 401 after login",
+    "debug API 401",
+    "401 unauthorized after login",
+    "authentication cookie debugging",
+    "bearer token debugging",
+    "modify request headers",
+    "browser API authentication"
   ],
   alternates: {
     canonical: "/guides/api-returns-401-after-login"

@@ -10,7 +10,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ["debug with profiles", "header profiles", "modify header extension", "browser extension to modify headers", "edit headers in browser", "chrome extension to modify headers", "browser extension to edit headers", "Chrome extension to modify cookies", "edit headers", "edit cookies", "inject headers"],
+  keywords: ["header profiles", "local header profiles", "staging header rules", "API debugging profiles", "modify headers with browser extension", "cookie profiles", "QA browser profiles"],
   alternates: { canonical: "/guides/debug-with-header-profiles" },
   openGraph: { title: `${title} | Header Override`, description, url: pageUrl, siteName: "Header Override", type: "article", publishedTime: "2026-07-25", images: [{ url: "/screenshots/guide-staging-profiles.png", width: 760, height: 520, alt: "Header Override profiles menu" }] },
   twitter: { card: "summary_large_image", title: `${title} | Header Override`, description, images: ["/screenshots/guide-staging-profiles.png"] }

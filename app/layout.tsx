@@ -15,7 +15,7 @@ const socialImage = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Header Override - Modify HTTP Headers And Cookies",
+    default: "Modify HTTP Headers & Cookies | Header Override",
     template: "%s | Header Override"
   },
   description: siteDescription,
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     telephone: false
   },
   openGraph: {
-    title: "Header Override - Modify HTTP Headers And Cookies",
+    title: "Modify HTTP Headers & Cookies | Header Override",
     description: siteDescription,
     url: siteUrl,
     siteName: "Header Override",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Header Override - Modify HTTP Headers And Cookies",
+    title: "Modify HTTP Headers & Cookies | Header Override",
     description: siteDescription,
     images: [socialImage]
   },

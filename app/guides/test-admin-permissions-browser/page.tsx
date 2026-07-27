@@ -10,7 +10,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ["test admin permissions", "debug 403 browser", "role based access testing", "modify header extension", "edit headers in browser", "chrome extension to modify headers", "browser extension to edit headers", "Chrome extension to modify cookies", "edit headers", "edit cookies", "inject headers"],
+  keywords: ["test admin permissions without multiple accounts", "debug 403 browser", "role based access testing", "test authorization headers", "tenant header testing", "staging permission debugging", "browser API permission testing"],
   alternates: { canonical: "/guides/test-admin-permissions-browser" },
   openGraph: { title: `${title} | Header Override`, description, url: pageUrl, siteName: "Header Override", type: "article", publishedTime: "2026-07-25", images: [{ url: "/screenshots/feature-headers-1280x800.png", width: 1280, height: 800, alt: "Header Override request header rules" }] },
   twitter: { card: "summary_large_image", title: `${title} | Header Override`, description, images: ["/screenshots/feature-headers-1280x800.png"] }

@@ -6,35 +6,35 @@ import { storeLinks, withWebsiteUtm } from "./storeLinks";
 
 const features = [
   {
-    title: "Split request and response",
+    title: "Modify headers with the header editor",
     body: "Add request headers, response headers, request cookies, and response cookies in focused tabs."
   },
   {
-    title: "Target URL patterns",
+    title: "Scope header rules by URL",
     body: "Scope matching rules with browser-supported URL filter patterns."
   },
   {
-    title: "Control cookie attributes",
+    title: "Modify request and response cookies",
     body: "Set response cookie Domain, Path, SameSite, Lifetime, Max-Age, and Secure attributes."
   },
   {
-    title: "Use profiles",
+    title: "Use header editor profiles",
     body: "Keep up to five local rule profiles for different projects, accounts, or test setups."
   },
   {
-    title: "Import and export",
+    title: "Import and export header rules",
     body: "Move selected profiles between browsers with local JSON import and export."
   },
   {
-    title: "Supported browsers",
+    title: "Chrome, Edge, and Firefox support",
     body: "Use Header Override in Chrome, Edge, and Firefox."
   },
   {
-    title: "Keep rules tidy",
+    title: "Organize and toggle header rules",
     body: "Enable, disable, delete, and annotate rules with comments."
   },
   {
-    title: "Stay local",
+    title: "Keep header rules stored locally",
     body: "Rules are saved locally in your browser and never sent to a server."
   }
 ];
@@ -203,9 +203,10 @@ export default function Home() {
 
         <div className="hero-grid shell">
           <div className="hero-copy">
-            <h1>Header Override</h1>
+            <h1>Modify HTTP Headers and Cookies</h1>
             <p className="lede">
-              An open-source browser extension to modify headers and cookies
+              An open-source browser extension to modify HTTP request and
+              response headers, inject custom headers and cookies, and test APIs
               with switchable local profiles.
             </p>
             <div className="actions">

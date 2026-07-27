@@ -11,17 +11,13 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "edit headers in browser",
-    "modify header extension",
-    "browser extension to modify headers",
-    "chrome extension to modify headers",
-    "browser extension to edit headers",
-    "Chrome extension to modify cookies",
-    "edit headers",
-    "edit cookies",
-    "inject headers",
+    "api works in postman but fails in browser",
+    "postman vs browser api",
+    "browser api debugging",
+    "edit HTTP headers in browser",
     "CORS debugging",
-    "API headers"
+    "browser authentication cookies",
+    "modify request headers"
   ],
   alternates: {
     canonical: "/guides/api-works-postman-fails-browser"
