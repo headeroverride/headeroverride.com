@@ -22,6 +22,13 @@ export default {
     headers.append("Link", '</sitemap.xml>; rel="sitemap"; type="application/xml"');
     headers.set("X-Llms-Txt", "/llms.txt");
 
+    if (
+      url.pathname === "/video/header-override-demo.mp4" ||
+      url.pathname === "/screenshots/screenshot-1280x800.png"
+    ) {
+      headers.set("X-Robots-Tag", "noindex");
+    }
+
     const htmlPath = normalizePath(url.pathname);
     const alternateMarkdownPath = markdownRoutes.get(htmlPath);
 

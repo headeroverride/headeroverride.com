@@ -141,19 +141,6 @@ const organizationJsonLd = {
   logo: "https://headeroverride.com/icons/icon-128.png"
 };
 
-const videoJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  name: "Header Override demo",
-  description:
-    "A short demo showing how to modify headers with Header Override and verify request headers in the browser Network tab.",
-  thumbnailUrl: "https://headeroverride.com/screenshots/feature-headers-1280x800.png",
-  uploadDate: "2026-07-17T00:00:00Z",
-  duration: "PT28S",
-  contentUrl: "https://headeroverride.com/video/header-override-demo.mp4",
-  embedUrl: "https://headeroverride.com"
-};
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -177,7 +164,6 @@ export default function Home() {
             softwareJsonLd,
             websiteJsonLd,
             organizationJsonLd,
-            videoJsonLd,
             faqJsonLd
           ])
         }}
