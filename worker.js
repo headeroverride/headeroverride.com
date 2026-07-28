@@ -2,7 +2,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.hostname === "www.headeroverride.com") {
+    if (url.hostname === "www.headeroverride.com" || url.protocol !== "https:") {
+      url.protocol = "https:";
       url.hostname = "headeroverride.com";
       return Response.redirect(url.toString(), 301);
     }
@@ -39,7 +40,7 @@ export default {
       );
     }
 
-    if (markdownPath) {
+    if (markdownPath || markdownAssetPaths.has(normalizePath(url.pathname))) {
       headers.set("Content-Type", "text/markdown; charset=utf-8");
       headers.set("X-Robots-Tag", "noindex, follow");
     }
@@ -68,8 +69,11 @@ export default {
 const markdownRoutes = new Map([
   ["/", "/index.md"],
   ["/modheader-alternative", "/modheader-alternative.md"],
-  ["/privacy", "/privacy.md"]
+  ["/privacy", "/privacy.md"],
+  ["/contact", "/contact.md"]
 ]);
+
+const markdownAssetPaths = new Set(markdownRoutes.values());
 
 function getMarkdownPath(request, url) {
   if (url.searchParams.get("format") === "md") {

@@ -60,7 +60,7 @@ Yes. Header and cookie rules can be scoped with browser-supported URL filter pat
 
 ### Why does Header Override request access to websites?
 
-Header Override needs host access so browser-supported rules can apply to the URL patterns you create. The extension does not send your rules or browsing activity to the developer or third parties.
+Header Override needs access to all URLs because you can create rules for any website and scope them with URL filters. The extension processes your rules locally and does not send your rules, browsing activity, headers, cookies, or website content to the developer or third parties.
 
 ## Links
 

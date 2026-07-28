@@ -20,7 +20,7 @@ The extension stores rules locally in the user's browser. It does not use analyt
 - Supported browsers: Chrome, Edge, Firefox
 - Data handling: Local browser extension storage only
 - Tracking: No analytics, no advertising, no tracking
-- Current version: 1.0.4
+- Current version: 1.0.6
 - Profile support: Up to five local profiles with selected-profile JSON import and export
 - Main developer: Orest Kreminskyi
 - Developer LinkedIn: https://www.linkedin.com/in/orest-kreminskyi-33852065/
@@ -77,7 +77,7 @@ Yes. Header and cookie rules can be scoped with browser-supported URL filter pat
 
 ### Why does Header Override request access to websites?
 
-Header Override needs host access so browser-supported rules can apply to the URL patterns you create. The extension does not send your rules or browsing activity to the developer or third parties.
+Header Override needs access to all URLs because users can create rules for any website and scope them with URL filters. The extension processes rules locally and does not send rules, browsing activity, headers, cookies, or website content to the developer or third parties.
 
 ## Privacy Policy
 
@@ -93,7 +93,7 @@ Header Override does not send your rules, browsing activity, website content, or
 
 Rules are stored locally in your browser using extension storage. You can edit or delete rules from the extension popup. Uninstalling the extension removes the locally stored extension data according to the browser's normal extension storage behavior.
 
-Header Override requests access to all URLs so that user-created rules can apply to the websites and requests selected by the user's URL filters. It requests storage permission so rules can be saved locally.
+Header Override requests access to all URLs so that user-created rules can apply to any website and request selected by the user's URL filters. This access is used only by the browser's request rules API to perform the overrides you configure; it is not used to collect browsing activity. The extension also requests storage permission so rules can be saved locally.
 
 For privacy questions, email support@headeroverride.com.
 

@@ -8,7 +8,7 @@ Header Override lets users create local rules that override HTTP headers and coo
 
 Header Override stores the rules you create in your browser's local extension storage. This data may include profile names, header names, header values, cookie names, cookie values, cookie attributes, cookie domains, paths, URL filter patterns, comments, and whether each rule is enabled.
 
-The extension uses these rules only to configure the browser's request rules API, write request cookies you configured, and apply the header or cookie changes you requested.
+The extension uses these rules only to configure the browser's request rules API, write request cookies you configured, and apply the header or cookie changes you requested. Because users may configure authentication headers or cookies, treat values entered into the extension as sensitive and do not share them with support.
 
 ## Data collection and sharing
 
@@ -20,7 +20,7 @@ Rules are stored locally in your browser using extension storage. You can edit o
 
 ## Permissions
 
-Header Override requests access to all URLs so that user-created rules can apply to the websites and requests selected by the user's URL filters. It requests storage permission so rules can be saved locally.
+Header Override requests access to all URLs so that user-created rules can apply to any website and request selected by the user's URL filters. This access is used only by the browser's request rules API to perform the overrides you configure; it is not used to collect browsing activity. The extension also requests storage permission so rules can be saved locally.
 
 ## Contact
 

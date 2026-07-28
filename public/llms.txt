@@ -29,7 +29,7 @@ The extension stores rules locally in the user's browser. It does not use analyt
 - Data handling: Local browser extension storage only
 - Tracking: No analytics, no advertising, no tracking
 - Current availability: Chrome, Edge, and Firefox extensions available
-- Current version: 1.0.4
+- Current version: 1.0.6
 - Profile support: Up to five local profiles with selected-profile JSON import and export
 - Main developer: Orest Kreminskyi
 - GitHub repository: https://github.com/headeroverride/headeroverride

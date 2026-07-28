@@ -102,7 +102,10 @@ export default function PrivacyPage() {
             <p>
               The extension uses these rules only to configure the browser&apos;s
               request rules API, write request cookies you configured, and
-              apply the header or cookie changes you requested.
+              apply the header or cookie changes you requested. Because users
+              may configure authentication headers or cookies, treat values
+              entered into the extension as sensitive and do not share them
+              with support.
             </p>
           </section>
 
@@ -131,9 +134,11 @@ export default function PrivacyPage() {
             <h2>Permissions</h2>
             <p>
               Header Override requests access to all URLs so that user-created
-              rules can apply to the websites and requests selected by the
-              user&apos;s URL filters. It requests storage permission so rules can
-              be saved locally.
+              rules can apply to any website and request selected by the
+              user&apos;s URL filters. This access is used only by the browser&apos;s
+              request rules API to perform the overrides you configure; it is
+              not used to collect browsing activity. The extension also
+              requests storage permission so rules can be saved locally.
             </p>
           </section>
 
