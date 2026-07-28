@@ -54,6 +54,11 @@ body {
   gap: 18px;
 }
 
+.product-hunt-badge img {
+  width: 100px;
+  height: auto;
+}
+
 .site-footer a:hover {
   color: var(--text);
 }
