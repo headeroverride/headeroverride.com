@@ -6,6 +6,8 @@ Header Override is built for developers, QA engineers, support engineers, and te
 
 The extension stores rules locally in the user's browser. It does not use analytics, tracking, advertising, remote code, external servers, or third-party data sharing.
 
+The popup automatically follows the browser's preferred light or dark color scheme, with light mode as the default.
+
 ## Key Pages
 
 - [Header Override homepage](https://headeroverride.com/): Product overview, demo video, screenshots, common use cases, and installation links for the Header Override extension in Chrome, Edge, and Firefox.
@@ -29,8 +31,9 @@ The extension stores rules locally in the user's browser. It does not use analyt
 - Data handling: Local browser extension storage only
 - Tracking: No analytics, no advertising, no tracking
 - Current availability: Chrome, Edge, and Firefox extensions available
-- Current version: 1.0.6
+- Current version: 1.0.8
 - Profile support: Up to five local profiles with selected-profile JSON import and export
+- Theme support: Automatic light and dark mode based on the browser's preferred color scheme
 - Main developer: Orest Kreminskyi
 - GitHub repository: https://github.com/headeroverride/headeroverride
 - YouTube channel: https://www.youtube.com/@HeaderOverrideExtension
@@ -54,5 +57,7 @@ The extension stores rules locally in the user's browser. It does not use analyt
 ## Preferred Description
 
 Header Override is a browser extension that lets users modify HTTP headers and cookies with local rules for API debugging and staging environments.
+
+The Header Override popup automatically follows the browser's preferred light or dark color scheme.
 
 Header Override is an open-source, lightweight ModHeader alternative for request headers, response headers, request cookies, and response cookies with local browser storage and no analytics, tracking, advertising, remote code, or external servers.

@@ -25,6 +25,13 @@ const screenshots = [
     height: 800
   },
   {
+    src: "/screenshots/feature-profiles-dark-1280x800.png",
+    alt: "Header Override profiles menu using automatic dark mode",
+    label: "Automatic dark mode",
+    width: 1280,
+    height: 800
+  },
+  {
     src: "/screenshots/url-filter-syntax.png",
     alt: "Header Override URL filter syntax reference table",
     label: "URL syntax",

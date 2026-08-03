@@ -11,6 +11,8 @@ Header Override helps developers, QA engineers, support engineers, and technical
 
 The extension stores rules locally in the user's browser. It does not use analytics, tracking, advertising, remote code, external servers, or third-party data sharing.
 
+The popup automatically follows the browser's preferred light or dark color scheme, with light mode as the default.
+
 ## Product Facts
 
 - Product name: Header Override
@@ -20,8 +22,9 @@ The extension stores rules locally in the user's browser. It does not use analyt
 - Supported browsers: Chrome, Edge, Firefox
 - Data handling: Local browser extension storage only
 - Tracking: No analytics, no advertising, no tracking
-- Current version: 1.0.6
+- Current version: 1.0.8
 - Profile support: Up to five local profiles with selected-profile JSON import and export
+- Theme support: Automatic light and dark mode based on the browser's preferred color scheme
 - Main developer: Orest Kreminskyi
 - Developer LinkedIn: https://www.linkedin.com/in/orest-kreminskyi-33852065/
 - GitHub repository: https://github.com/headeroverride/headeroverride
@@ -44,6 +47,7 @@ The extension stores rules locally in the user's browser. It does not use analyt
 - Create up to five local profiles for different projects, accounts, or test setups.
 - Import and export selected profiles as local JSON files.
 - Use Header Override in Chrome, Edge, and Firefox.
+- Follow the browser's preferred light or dark color scheme automatically.
 - Scope matching rules with browser-supported URL filter patterns.
 - Enable, disable, delete, and annotate rules with comments.
 - Store rules locally in browser extension storage.

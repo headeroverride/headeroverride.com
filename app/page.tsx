@@ -30,6 +30,10 @@ const features = [
     body: "Use Header Override in Chrome, Edge, and Firefox."
   },
   {
+    title: "Automatic light and dark mode",
+    body: "Follow the browser's preferred color scheme automatically, with light mode as the default."
+  },
+  {
     title: "Organize and toggle header rules",
     body: "Enable, disable, delete, and annotate rules with comments."
   },
@@ -97,6 +101,7 @@ const softwareJsonLd = {
     "https://headeroverride.com/screenshots/feature-headers-1280x800.png",
     "https://headeroverride.com/screenshots/feature-cookies-1280x800.png",
     "https://headeroverride.com/screenshots/feature-profiles-1280x800.png",
+    "https://headeroverride.com/screenshots/feature-profiles-dark-1280x800.png",
     "https://headeroverride.com/screenshots/feature-url-filters-1280x800.png",
     "https://headeroverride.com/screenshots/profile-dropdown-zoom.png",
     "https://headeroverride.com/screenshots/url-filter-syntax.png"
@@ -108,7 +113,7 @@ const softwareJsonLd = {
   },
   isAccessibleForFree: true,
   privacyPolicy: "https://headeroverride.com/privacy",
-  softwareVersion: "1.0.6",
+  softwareVersion: "1.0.8",
   featureList: [
     "Modify HTTP request headers",
     "Modify HTTP response headers",
@@ -118,6 +123,7 @@ const softwareJsonLd = {
     "Create up to five local rule profiles",
     "Import and export selected profiles as JSON",
     "Use in Chrome, Edge, and Firefox",
+    "Follow the browser's preferred light or dark color scheme automatically",
     "Scope rules with URL filter patterns",
     "Enable, disable, add, and delete rules",
     "Store rules locally in the browser"

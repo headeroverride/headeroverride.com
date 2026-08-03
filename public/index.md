@@ -12,6 +12,8 @@ Header Override is an open-source, lightweight ModHeader alternative for users w
 
 Rules are stored locally in the user's browser and applied only to matching requests. Header Override does not use analytics, tracking, advertising, remote code, external servers, or third-party data sharing.
 
+The popup automatically follows the browser's preferred light or dark color scheme, with light mode as the default.
+
 ## Key Features
 
 - Add or replace HTTP request and response headers from the extension popup.
@@ -21,6 +23,7 @@ Rules are stored locally in the user's browser and applied only to matching requ
 - Create up to five local profiles for different projects, accounts, or test setups.
 - Import and export selected profiles as local JSON files.
 - Use Header Override in Chrome, Edge, and Firefox.
+- Follow the browser's preferred light or dark color scheme automatically.
 - Scope matching rules with browser-supported URL filter patterns.
 - Enable, disable, delete, and annotate rules with comments.
 - Store rules locally in browser extension storage.
