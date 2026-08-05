@@ -5,7 +5,7 @@ const baseUrl = "https://headeroverride.com";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const homepageModified = new Date("2026-07-27");
+  const homepageModified = new Date("2026-08-05");
   const existingContentModified = new Date("2026-07-23");
 
   return [

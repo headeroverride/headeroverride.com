@@ -19,6 +19,9 @@ export default function SiteFooter() {
               width="250"
               height="54"
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1206875&theme=light&t=1785230338704"
+              loading="lazy"
+              fetchPriority="low"
+              decoding="async"
             />
           </a>
         </nav>

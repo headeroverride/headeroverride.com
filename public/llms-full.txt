@@ -31,9 +31,9 @@ The extension stores rules locally in the user's browser. It does not use analyt
 
 ## Install Links
 
-- Chrome Web Store: https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm?utm_source=website
-- Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/albhpnnccbkfkloddpaecdmhpnmnldhn?utm_source=website
-- Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/headeroverride?utm_source=website
+- Chrome Web Store: https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm
+- Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/albhpnnccbkfkloddpaecdmhpnmnldhn
+- Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/headeroverride
 
 ## Features
 
@@ -56,6 +56,14 @@ The extension stores rules locally in the user's browser. It does not use analyt
 - Toggle backend flags while testing UI flows in your browser.
 - Switch between client, environment, or test-account setups with profiles.
 - Document temporary rules before removing them.
+
+## Troubleshooting Guides
+
+- [Why an API works in Postman but fails in the browser](https://headeroverride.com/guides/api-works-postman-fails-browser): Diagnose CORS enforcement, browser-added headers, credentials, and request differences.
+- [Why an API returns 401 after browser login](https://headeroverride.com/guides/api-returns-401-after-login): Check cookie scope, SameSite behavior, credentials, and authorization headers.
+- [Debug CORS preflight requests](https://headeroverride.com/guides/debug-cors-preflight-requests): Inspect OPTIONS requests and test scoped request and response header rules.
+- [Debug with header profiles](https://headeroverride.com/guides/debug-with-header-profiles): Keep separate local rule sets for development, QA, staging, and test accounts.
+- [Test admin permissions in the browser](https://headeroverride.com/guides/test-admin-permissions-browser): Reproduce scoped test roles and permission headers without rebuilding the frontend.
 
 ## FAQ
 
@@ -121,6 +129,11 @@ Do not send passwords, access tokens, cookies, private header values, or other s
 - Markdown homepage: https://headeroverride.com/index.md
 - ModHeader alternative: https://headeroverride.com/modheader-alternative
 - Markdown ModHeader alternative: https://headeroverride.com/modheader-alternative.md
+- API works in Postman but fails in browser guide: https://headeroverride.com/guides/api-works-postman-fails-browser
+- API returns 401 after login guide: https://headeroverride.com/guides/api-returns-401-after-login
+- CORS preflight debugging guide: https://headeroverride.com/guides/debug-cors-preflight-requests
+- Header profiles debugging guide: https://headeroverride.com/guides/debug-with-header-profiles
+- Admin permissions testing guide: https://headeroverride.com/guides/test-admin-permissions-browser
 - Privacy policy: https://headeroverride.com/privacy
 - Markdown privacy policy: https://headeroverride.com/privacy.md
 - Contact: https://headeroverride.com/contact

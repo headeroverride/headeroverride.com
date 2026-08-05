@@ -2,7 +2,10 @@ import ScreenshotSwiper from "./ScreenshotSwiper";
 import InstallButton from "./InstallButton";
 import WorkflowSwiper from "./WorkflowSwiper";
 import GuideDropdown from "./GuideDropdown";
+import HeroVideo from "./HeroVideo";
+import { heroPoster } from "./heroMedia";
 import { storeLinks, withWebsiteUtm } from "./storeLinks";
+import { preload } from "react-dom";
 
 const features = [
   {
@@ -78,6 +81,7 @@ const faqs = [
 const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://headeroverride.com/#software",
   name: "Header Override",
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Modern desktop browsers",
@@ -87,13 +91,14 @@ const softwareJsonLd = {
     "Header Override is a browser extension to modify HTTP headers and cookies with local rules for API debugging, staging, and QA workflows.",
   image: "https://headeroverride.com/screenshots/marquee-1400x560.png",
   sameAs: [
-    "https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm?utm_source=website",
-    "https://microsoftedge.microsoft.com/addons/detail/albhpnnccbkfkloddpaecdmhpnmnldhn?utm_source=website",
-    "https://addons.mozilla.org/en-US/firefox/addon/headeroverride?utm_source=website",
+    "https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm",
+    "https://microsoftedge.microsoft.com/addons/detail/albhpnnccbkfkloddpaecdmhpnmnldhn",
+    "https://addons.mozilla.org/en-US/firefox/addon/headeroverride",
     "https://github.com/headeroverride/headeroverride",
     "https://www.youtube.com/@HeaderOverrideExtension"
   ],
   screenshot: [
+    "https://headeroverride.com/screenshots/screenshot-1280x800.png",
     "https://headeroverride.com/screenshots/feature-headers-1280x800.png",
     "https://headeroverride.com/screenshots/feature-cookies-1280x800.png",
     "https://headeroverride.com/screenshots/feature-profiles-1280x800.png",
@@ -109,6 +114,9 @@ const softwareJsonLd = {
   isAccessibleForFree: true,
   privacyPolicy: "https://headeroverride.com/privacy",
   softwareVersion: "1.0.6",
+  subjectOf: {
+    "@id": "https://headeroverride.com/#demo-video"
+  },
   featureList: [
     "Modify HTTP request headers",
     "Modify HTTP response headers",
@@ -127,18 +135,76 @@ const softwareJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://headeroverride.com/#website",
   name: "Header Override",
   url: "https://headeroverride.com",
   description:
-    "The official website for Header Override, a browser extension for modifying HTTP headers and cookies with local rules."
+    "The official website for Header Override, a browser extension for modifying HTTP headers and cookies with local rules.",
+  publisher: {
+    "@id": "https://headeroverride.com/#organization"
+  }
 };
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://headeroverride.com/#organization",
   name: "Header Override",
   url: "https://headeroverride.com",
-  logo: "https://headeroverride.com/icons/icon-128.png"
+  logo: "https://headeroverride.com/icons/icon-128.png",
+  sameAs: [
+    "https://github.com/headeroverride/headeroverride",
+    "https://www.youtube.com/@HeaderOverrideExtension"
+  ]
+};
+
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://headeroverride.com/#webpage",
+  url: "https://headeroverride.com/",
+  name: "Modify HTTP Headers & Cookies | Header Override",
+  description:
+    "Modify HTTP headers and cookies with local rules using the open-source Header Override browser extension.",
+  dateModified: "2026-08-05",
+  isPartOf: {
+    "@id": "https://headeroverride.com/#website"
+  },
+  mainEntity: {
+    "@id": "https://headeroverride.com/#software"
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://headeroverride.com/screenshots/marquee-1400x560.png",
+    width: 1400,
+    height: 560
+  }
+};
+
+const videoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://headeroverride.com/#demo-video",
+  name: "How to modify request headers with Header Override",
+  description:
+    "A short product demo showing Header Override modifying scoped request headers and verifying them in the browser Network tab.",
+  thumbnailUrl:
+    "https://headeroverride.com/screenshots/screenshot-640x400.png",
+  uploadDate: "2026-07-25T15:39:54+03:00",
+  duration: "PT28S",
+  contentUrl:
+    "https://headeroverride.com/video/header-override-demo.mp4",
+  url: "https://headeroverride.com/",
+  isFamilyFriendly: true,
+  about: {
+    "@id": "https://headeroverride.com/#software"
+  },
+  isPartOf: {
+    "@id": "https://headeroverride.com/#webpage"
+  },
+  publisher: {
+    "@id": "https://headeroverride.com/#organization"
+  }
 };
 
 const faqJsonLd = {
@@ -155,6 +221,14 @@ const faqJsonLd = {
 };
 
 export default function Home() {
+  preload(heroPoster.avif1280, {
+    as: "image",
+    type: "image/avif",
+    fetchPriority: "high",
+    imageSrcSet: heroPoster.avifSrcSet,
+    imageSizes: heroPoster.sizes
+  });
+
   return (
     <main>
       <script
@@ -164,6 +238,8 @@ export default function Home() {
             softwareJsonLd,
             websiteJsonLd,
             organizationJsonLd,
+            webPageJsonLd,
+            videoJsonLd,
             faqJsonLd
           ])
         }}
@@ -240,15 +316,7 @@ export default function Home() {
               <span></span>
               <span></span>
             </div>
-            <video
-              src="/video/header-override-demo.mp4"
-              poster="/screenshots/screenshot-1280x800.png"
-              controls
-              muted
-              playsInline
-              preload="metadata"
-              aria-label="Demo of Header Override modifying request headers and verifying them in the Network tab"
-            />
+            <HeroVideo />
           </div>
         </div>
       </section>

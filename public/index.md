@@ -28,9 +28,9 @@ Rules are stored locally in the user's browser and applied only to matching requ
 
 ## Install Links
 
-- Chrome Web Store: https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm?utm_source=website
-- Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/albhpnnccbkfkloddpaecdmhpnmnldhn?utm_source=website
-- Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/headeroverride?utm_source=website
+- Chrome Web Store: https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm
+- Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/albhpnnccbkfkloddpaecdmhpnmnldhn
+- Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/headeroverride
 
 ## Common Use Cases
 
@@ -39,6 +39,14 @@ Rules are stored locally in the user's browser and applied only to matching requ
 - Toggle backend flags while testing UI flows in your browser.
 - Switch between client, environment, or test-account setups with profiles.
 - Document temporary rules before removing them.
+
+## Troubleshooting Guides
+
+- [Why an API works in Postman but fails in the browser](https://headeroverride.com/guides/api-works-postman-fails-browser)
+- [Why an API returns 401 after browser login](https://headeroverride.com/guides/api-returns-401-after-login)
+- [Debug CORS preflight requests](https://headeroverride.com/guides/debug-cors-preflight-requests)
+- [Debug with header profiles](https://headeroverride.com/guides/debug-with-header-profiles)
+- [Test admin permissions in the browser](https://headeroverride.com/guides/test-admin-permissions-browser)
 
 ## FAQ
 

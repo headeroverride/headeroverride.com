@@ -15,7 +15,10 @@ Allow: /
 User-Agent: Google-Extended
 Allow: /
 
-Content-Signal: ai-train=no, search=yes, ai-input=yes
+User-Agent: PerplexityBot
+Allow: /
+
+Content-Signal: search=yes, ai-input=yes, ai-train=yes, use=full
 
 Host: https://headeroverride.com
 Sitemap: https://headeroverride.com/sitemap.xml
