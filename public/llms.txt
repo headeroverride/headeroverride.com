@@ -1,6 +1,6 @@
 # Header Override
 
-> Header Override is an open-source browser extension for modifying HTTP headers and cookies with local rules.
+> Header Override is an open-source browser extension for Chrome, Firefox, and Edge to modify HTTP request and response headers and cookies with local rules.
 
 Header Override is built for developers, QA engineers, support engineers, and technical users who need to test APIs, staging environments, feature flags, cookies, and request-specific behavior without changing application code.
 

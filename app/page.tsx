@@ -88,7 +88,7 @@ const softwareJsonLd = {
   browserRequirements: "Chrome, Edge, and Firefox",
   url: "https://headeroverride.com",
   description:
-    "Header Override is a browser extension to modify HTTP headers and cookies with local rules for API debugging, staging, and QA workflows.",
+    "Header Override is an open-source browser extension for Chrome, Firefox, and Edge to modify HTTP request and response headers and cookies with local rules.",
   image: "https://headeroverride.com/screenshots/marquee-1400x560.png",
   sameAs: [
     "https://chromewebstore.google.com/detail/gkobmjeklkiepibofnghbkcjiphjacfm",
@@ -139,7 +139,7 @@ const websiteJsonLd = {
   name: "Header Override",
   url: "https://headeroverride.com",
   description:
-    "The official website for Header Override, a browser extension for modifying HTTP headers and cookies with local rules.",
+    "The official website for Header Override, an open-source Chrome, Firefox, and Edge extension to modify HTTP headers and cookies with local rules.",
   publisher: {
     "@id": "https://headeroverride.com/#organization"
   }
@@ -165,7 +165,7 @@ const webPageJsonLd = {
   url: "https://headeroverride.com/",
   name: "Modify HTTP Headers & Cookies | Header Override",
   description:
-    "Modify HTTP headers and cookies with local rules using the open-source Header Override browser extension.",
+    "Use the open-source Header Override extension in Chrome, Firefox, and Edge to modify HTTP request and response headers and cookies with local rules.",
   dateModified: "2026-08-05",
   isPartOf: {
     "@id": "https://headeroverride.com/#website"
@@ -283,7 +283,8 @@ export default function Home() {
             <p className="lede">
               An open-source browser extension to modify HTTP request and
               response headers, inject custom headers and cookies, and test APIs
-              with switchable local profiles.
+              with switchable local profiles. Available for Chrome, Firefox,
+              and Edge.
             </p>
             <div className="actions">
               <InstallButton />
