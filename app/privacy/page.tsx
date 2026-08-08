@@ -37,7 +37,7 @@ const privacyJsonLd = {
     name: "Header Override",
     url: "https://headeroverride.com"
   },
-  dateModified: "2026-07-20",
+  dateModified: "2026-08-08",
   description:
     "Header Override stores user-created header and cookie rules locally in browser extension storage and does not transmit personal data to the developer or third parties."
 };
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
           </div>
         </nav>
 
-        <p className="eyebrow">Last updated July 20, 2026</p>
+        <p className="eyebrow">Last updated August 8, 2026</p>
         <h1>Privacy Policy</h1>
         <p className="legal-lede">
           Header Override lets users create local rules that override HTTP
@@ -100,12 +100,12 @@ export default function PrivacyPage() {
               and whether each rule is enabled.
             </p>
             <p>
-              The extension uses these rules only to configure the browser&apos;s
-              request rules API, write request cookies you configured, and
-              apply the header or cookie changes you requested. Because users
-              may configure authentication headers or cookies, treat values
-              entered into the extension as sensitive and do not share them
-              with support.
+              Header and cookie values may contain sensitive authentication
+              information, such as access tokens or session cookies. The
+              extension uses this information only to configure the browser&apos;s
+              request rules API and apply the changes requested by the user.
+              Treat sensitive values entered into the extension as confidential
+              and do not share them with support.
             </p>
           </section>
 
@@ -116,6 +116,16 @@ export default function PrivacyPage() {
               website content, or any other personal data to the developer or to
               any third party. The extension does not use analytics, advertising,
               tracking, remote code, or external servers.
+            </p>
+          </section>
+
+          <section>
+            <h2>Limited Use</h2>
+            <p>
+              Header Override&apos;s use of information received through Chrome
+              APIs adheres to the Chrome Web Store User Data Policy, including
+              the Limited Use requirements. User data is used only to provide
+              the extension&apos;s disclosed functionality.
             </p>
           </section>
 

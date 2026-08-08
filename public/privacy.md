@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated July 20, 2026.
+Last updated August 8, 2026.
 
 Header Override lets users create local rules that override HTTP headers and cookies for URLs they choose.
 
@@ -8,11 +8,15 @@ Header Override lets users create local rules that override HTTP headers and coo
 
 Header Override stores the rules you create in your browser's local extension storage. This data may include profile names, header names, header values, cookie names, cookie values, cookie attributes, cookie domains, paths, URL filter patterns, comments, and whether each rule is enabled.
 
-The extension uses these rules only to configure the browser's request rules API, write request cookies you configured, and apply the header or cookie changes you requested. Because users may configure authentication headers or cookies, treat values entered into the extension as sensitive and do not share them with support.
+Header and cookie values may contain sensitive authentication information, such as access tokens or session cookies. The extension uses this information only to configure the browser's request rules API and apply the changes requested by the user. Treat sensitive values entered into the extension as confidential and do not share them with support.
 
 ## Data collection and sharing
 
 Header Override does not send your rules, browsing activity, website content, or any other personal data to the developer or to any third party. The extension does not use analytics, advertising, tracking, remote code, or external servers.
+
+## Limited Use
+
+Header Override's use of information received through Chrome APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used only to provide the extension's disclosed functionality.
 
 ## Data storage and deletion
 
