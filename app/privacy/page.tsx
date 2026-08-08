@@ -39,7 +39,7 @@ const privacyJsonLd = {
   },
   dateModified: "2026-08-08",
   description:
-    "Header Override stores user-created header and cookie rules locally in browser extension storage and does not transmit personal data to the developer or third parties."
+    "Header Override stores user-created header and cookie rules locally and does not transmit rule data to the developer or developer-controlled servers."
 };
 
 export default function PrivacyPage() {
@@ -112,20 +112,25 @@ export default function PrivacyPage() {
           <section>
             <h2>Data collection and sharing</h2>
             <p>
-              Header Override does not send your rules, browsing activity,
-              website content, or any other personal data to the developer or to
-              any third party. The extension does not use analytics, advertising,
-              tracking, remote code, or external servers.
+              Header Override stores rule and profile configuration locally.
+              Request header and cookie values are sent only to destinations
+              matching the URL filters configured by the user; response header
+              and cookie values are applied only to matching responses. No rule
+              data is transmitted to the developer, analytics providers,
+              advertisers, or developer-controlled servers. The extension does
+              not use analytics, advertising, tracking, remote code, or external
+              servers.
             </p>
           </section>
 
           <section>
-            <h2>Limited Use</h2>
+            <h2>Browser store compliance</h2>
             <p>
-              Header Override&apos;s use of information received through Chrome
-              APIs adheres to the Chrome Web Store User Data Policy, including
-              the Limited Use requirements. User data is used only to provide
-              the extension&apos;s disclosed functionality.
+              Header Override&apos;s use of information received through browser
+              extension APIs adheres to applicable browser extension store user
+              data policies. For Chrome, this includes the Chrome Web Store User
+              Data Policy and its Limited Use requirements. User data is used
+              only to provide the extension&apos;s disclosed functionality.
             </p>
           </section>
 

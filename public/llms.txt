@@ -4,7 +4,7 @@
 
 Header Override is built for developers, QA engineers, support engineers, and technical users who need to test APIs, staging environments, feature flags, cookies, and request-specific behavior without changing application code.
 
-The extension stores rules locally in the user's browser. It does not use analytics, tracking, advertising, remote code, external servers, or third-party data sharing.
+The extension stores rules locally in the user's browser. It does not use analytics, tracking, advertising, remote code, or developer-controlled servers.
 
 ## Key Pages
 

@@ -12,11 +12,11 @@ Header and cookie values may contain sensitive authentication information, such 
 
 ## Data collection and sharing
 
-Header Override does not send your rules, browsing activity, website content, or any other personal data to the developer or to any third party. The extension does not use analytics, advertising, tracking, remote code, or external servers.
+Header Override stores rule and profile configuration locally. Request header and cookie values are sent only to destinations matching the URL filters configured by the user; response header and cookie values are applied only to matching responses. No rule data is transmitted to the developer, analytics providers, advertisers, or developer-controlled servers. The extension does not use analytics, advertising, tracking, remote code, or external servers.
 
-## Limited Use
+## Browser store compliance
 
-Header Override's use of information received through Chrome APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used only to provide the extension's disclosed functionality.
+Header Override's use of information received through browser extension APIs adheres to applicable browser extension store user data policies. For Chrome, this includes the Chrome Web Store User Data Policy and its Limited Use requirements. User data is used only to provide the extension's disclosed functionality.
 
 ## Data storage and deletion
 

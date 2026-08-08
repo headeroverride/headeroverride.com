@@ -10,7 +10,7 @@ Use the Header Override extension in Chrome, Edge, and Firefox to modify headers
 
 Header Override is an open-source, lightweight ModHeader alternative for users who want scoped local header and cookie overrides without analytics, tracking, remote code, or account-based workflows.
 
-Rules are stored locally in the user's browser and applied only to matching requests. Header Override does not use analytics, tracking, advertising, remote code, external servers, or third-party data sharing.
+Rules are stored locally in the user's browser and applied only to matching requests and responses. Header Override does not use analytics, tracking, advertising, remote code, or developer-controlled servers.
 
 ## Key Features
 
@@ -68,7 +68,7 @@ Yes. Header and cookie rules can be scoped with browser-supported URL filter pat
 
 ### Why does Header Override request access to websites?
 
-Header Override needs access to all URLs because you can create rules for any website and scope them with URL filters. The extension processes your rules locally and does not send your rules, browsing activity, headers, cookies, or website content to the developer or third parties.
+Header Override needs access to all URLs because you can create rules for any website and scope them with URL filters. Request header and cookie values are sent only to destinations matching your URL filters; response values are applied only to matching responses. No rule data or browsing activity is transmitted to the developer or developer-controlled servers.
 
 ## Links
 

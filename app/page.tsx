@@ -74,7 +74,7 @@ const faqs = [
   {
     question: "Why does Header Override request access to websites?",
     answer:
-      "Header Override needs access to all URLs because you can create rules for any website and scope them with URL filters. The extension processes your rules locally and does not send your rules, browsing activity, headers, cookies, or website content to the developer or third parties."
+      "Header Override needs access to all URLs because you can create rules for any website and scope them with URL filters. Request header and cookie values are sent only to destinations matching your URL filters; response values are applied only to matching responses. No rule data or browsing activity is transmitted to the developer or developer-controlled servers."
   }
 ];
 
@@ -419,9 +419,11 @@ export default function Home() {
         </div>
         <p>
           Rules are saved in your browser&apos;s local extension storage and used
-          only to apply the header and cookie changes you configure. Header
-          Override does not transmit your rules, browsing activity, or website
-          content to the developer or third parties.
+          only to apply the header and cookie changes you configure. Request
+          values are sent only to matching destinations, while response values
+          are applied only to matching responses. No rule data or browsing
+          activity is transmitted to the developer or developer-controlled
+          servers.
         </p>
       </section>
 

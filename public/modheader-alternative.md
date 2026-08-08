@@ -6,7 +6,7 @@ Header Override is an open-source, privacy-first ModHeader alternative for modif
 
 Header Override is built for developers, QA engineers, support engineers, and technical users comparing ModHeader alternatives for API debugging, staging environments, feature flags, cookies, and request-specific testing.
 
-Rules are stored locally in the user's browser and applied only to matching requests. Header Override does not use analytics, tracking, advertising, remote code, external servers, or third-party data sharing.
+Rules are stored locally in the user's browser and applied only to matching requests and responses. Header Override does not use analytics, tracking, advertising, remote code, or developer-controlled servers.
 
 ## Why Use Header Override As A ModHeader Alternative
 
@@ -39,7 +39,7 @@ Yes. Header Override supports request header rules and response header rules, an
 
 ### Does Header Override store rules on a server?
 
-No. Header Override stores rules locally in browser extension storage and does not transmit your rules, browsing activity, or website content to the developer or third parties.
+No. Header Override stores rules locally in browser extension storage and does not transmit rule data or browsing activity to the developer or developer-controlled servers.
 
 ## Links
 

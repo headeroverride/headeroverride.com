@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Does Header Override store rules on a server?",
     answer:
-      "No. Header Override stores rules locally in browser extension storage and does not transmit your rules, browsing activity, or website content to the developer or third parties."
+      "No. Header Override stores rules locally in browser extension storage and does not transmit rule data or browsing activity to the developer or developer-controlled servers."
   }
 ];
 
