@@ -23,13 +23,6 @@ export default {
     headers.append("Link", '</sitemap.xml>; rel="sitemap"; type="application/xml"');
     headers.set("X-Llms-Txt", "/llms.txt");
 
-    if (
-      url.pathname === "/video/header-override-demo.mp4" ||
-      url.pathname === "/screenshots/screenshot-1280x800.png"
-    ) {
-      headers.set("X-Robots-Tag", "noindex");
-    }
-
     const htmlPath = normalizePath(url.pathname);
     const alternateMarkdownPath = markdownRoutes.get(htmlPath);
 
@@ -45,8 +38,22 @@ export default {
       headers.set("X-Robots-Tag", "noindex, follow");
     }
 
-    if (url.pathname.startsWith("/_next/static/")) {
+    const isMediaAsset =
+      url.pathname.startsWith("/screenshots/") ||
+      url.pathname.startsWith("/video/");
+    const isVersionedMediaAsset =
+      isMediaAsset && url.searchParams.has("v");
+
+    if (
+      url.pathname.startsWith("/_next/static/") ||
+      isVersionedMediaAsset
+    ) {
       headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    } else if (isMediaAsset) {
+      headers.set(
+        "Cache-Control",
+        "public, max-age=86400, stale-while-revalidate=604800"
+      );
     } else if (
       url.pathname === "/robots.txt" ||
       url.pathname === "/sitemap.xml" ||

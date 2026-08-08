@@ -23,6 +23,7 @@ const workflowScreenshots = [
 
 export default function WorkflowSwiper() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const activeScreenshot = workflowScreenshots[activeIndex];
 
   function showPrevious() {
     setActiveIndex((index) => (index === 0 ? workflowScreenshots.length - 1 : index - 1));
@@ -43,21 +44,21 @@ export default function WorkflowSwiper() {
         >
           ‹
         </button>
-        {workflowScreenshots.map((screenshot, index) => (
-          <figure
-            className={`workflow-widget-slide ${screenshot.variant}${index === activeIndex ? " active" : ""}`}
-            key={screenshot.src}
-            aria-hidden={index !== activeIndex}
-          >
-            <img
-              src={screenshot.src}
-              alt={screenshot.alt}
-              width={screenshot.width}
-              height={screenshot.height}
-            />
-            <figcaption>{screenshot.label}</figcaption>
-          </figure>
-        ))}
+        <figure
+          className={`workflow-widget-slide ${activeScreenshot.variant} active`}
+          key={activeScreenshot.src}
+        >
+          <img
+            src={activeScreenshot.src}
+            alt={activeScreenshot.alt}
+            width={activeScreenshot.width}
+            height={activeScreenshot.height}
+            loading="lazy"
+            fetchPriority="low"
+            decoding="async"
+          />
+          <figcaption>{activeScreenshot.label}</figcaption>
+        </figure>
         <button
           type="button"
           className="workflow-widget-arrow next"

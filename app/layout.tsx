@@ -5,7 +5,7 @@ import SiteFooter from "./SiteFooter";
 
 const siteUrl = "https://headeroverride.com";
 const siteDescription =
-  "Modify HTTP headers and cookies with local rules. Header Override is an open-source browser extension for API debugging and staging environments.";
+  "Open-source Chrome, Firefox, and Edge extension to modify HTTP request and response headers, cookies, and local profiles for API debugging.";
 const socialImage = {
   url: "/screenshots/marquee-1400x560.png",
   width: 1400,

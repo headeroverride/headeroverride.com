@@ -51,21 +51,18 @@ export default function ScreenshotSwiper() {
         <button type="button" className="swiper-arrow previous" onClick={showPrevious} aria-label="Show previous screenshot">
           ‹
         </button>
-        {screenshots.map((screenshot, index) => (
-          <figure
-            className={`swiper-slide${index === activeIndex ? " active" : ""}`}
-            key={screenshot.src}
-            aria-hidden={index !== activeIndex}
-          >
-            <img
-              src={screenshot.src}
-              alt={screenshot.alt}
-              width={screenshot.width}
-              height={screenshot.height}
-            />
-            <figcaption>{screenshot.label}</figcaption>
-          </figure>
-        ))}
+        <figure className="swiper-slide active" key={activeScreenshot.src}>
+          <img
+            src={activeScreenshot.src}
+            alt={activeScreenshot.alt}
+            width={activeScreenshot.width}
+            height={activeScreenshot.height}
+            loading="lazy"
+            fetchPriority="low"
+            decoding="async"
+          />
+          <figcaption>{activeScreenshot.label}</figcaption>
+        </figure>
         <button type="button" className="swiper-arrow next" onClick={showNext} aria-label="Show next screenshot">
           ›
         </button>
