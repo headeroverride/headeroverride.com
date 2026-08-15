@@ -5,63 +5,51 @@ const baseUrl = "https://headeroverride.com";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const homepageModified = new Date("2026-08-05");
-  const existingContentModified = new Date("2026-07-23");
+  const august8 = new Date("2026-08-08");
+  const august15 = new Date("2026-08-15");
+  const july27 = new Date("2026-07-27");
+  const july25 = new Date("2026-07-25");
 
   return [
     {
       url: baseUrl,
-      lastModified: homepageModified,
-      changeFrequency: "weekly",
-      priority: 1
+      lastModified: august8
     },
     {
       url: `${baseUrl}/modheader-alternative`,
-      lastModified: existingContentModified,
-      changeFrequency: "weekly",
-      priority: 0.9
+      lastModified: august8
+    },
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: august15
     },
     {
       url: `${baseUrl}/guides/api-works-postman-fails-browser`,
-      lastModified: existingContentModified,
-      changeFrequency: "monthly",
-      priority: 0.8
+      lastModified: july27
     },
     {
       url: `${baseUrl}/guides/api-returns-401-after-login`,
-      lastModified: existingContentModified,
-      changeFrequency: "monthly",
-      priority: 0.8
+      lastModified: july27
     },
     {
       url: `${baseUrl}/guides/debug-cors-preflight-requests`,
-      lastModified: existingContentModified,
-      changeFrequency: "monthly",
-      priority: 0.8
+      lastModified: july27
     },
     {
       url: `${baseUrl}/guides/debug-with-header-profiles`,
-      lastModified: existingContentModified,
-      changeFrequency: "monthly",
-      priority: 0.8
+      lastModified: july27
     },
     {
       url: `${baseUrl}/guides/test-admin-permissions-browser`,
-      lastModified: existingContentModified,
-      changeFrequency: "monthly",
-      priority: 0.8
+      lastModified: july27
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: existingContentModified,
-      changeFrequency: "yearly",
-      priority: 0.6
+      lastModified: august8
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: existingContentModified,
-      changeFrequency: "monthly",
-      priority: 0.7
+      lastModified: july25
     }
   ];
 }

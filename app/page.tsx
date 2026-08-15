@@ -152,6 +152,13 @@ const organizationJsonLd = {
   name: "Header Override",
   url: "https://headeroverride.com",
   logo: "https://headeroverride.com/icons/icon-128.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "support@headeroverride.com",
+    url: "https://headeroverride.com/contact",
+    availableLanguage: "English"
+  },
   sameAs: [
     "https://github.com/headeroverride/headeroverride",
     "https://www.youtube.com/@HeaderOverrideExtension"
@@ -166,7 +173,7 @@ const webPageJsonLd = {
   name: "Modify HTTP Headers & Cookies | Header Override",
   description:
     "Use the open-source Header Override extension in Chrome, Firefox, and Edge to modify HTTP request and response headers and cookies with local rules.",
-  dateModified: "2026-08-05",
+  dateModified: "2026-08-08",
   isPartOf: {
     "@id": "https://headeroverride.com/#website"
   },

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+import Breadcrumbs, { createBreadcrumbJsonLd } from "../Breadcrumbs";
 import GuideDropdown from "../GuideDropdown";
+
+const breadcrumbItems = [
+  { name: "Home", href: "/" },
+  { name: "Privacy Policy", href: "/privacy" }
+];
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -42,12 +48,14 @@ const privacyJsonLd = {
     "Header Override stores user-created header and cookie rules locally and does not transmit rule data to the developer or developer-controlled servers."
 };
 
+const breadcrumbJsonLd = createBreadcrumbJsonLd(breadcrumbItems);
+
 export default function PrivacyPage() {
   return (
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([privacyJsonLd, breadcrumbJsonLd]) }}
       />
       <section className="legal-page shell">
         <nav className="legal-nav" aria-label="Primary">
@@ -82,6 +90,7 @@ export default function PrivacyPage() {
           </div>
         </nav>
 
+        <Breadcrumbs items={breadcrumbItems} />
         <p className="eyebrow">Last updated August 8, 2026</p>
         <h1>Privacy Policy</h1>
         <p className="legal-lede">

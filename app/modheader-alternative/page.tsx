@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import Breadcrumbs, { createBreadcrumbJsonLd } from "../Breadcrumbs";
 import InstallButton from "../InstallButton";
 import GuideDropdown from "../GuideDropdown";
 
 const pageUrl = "https://headeroverride.com/modheader-alternative";
 const pageDescription =
   "Header Override is an open-source, privacy-first ModHeader alternative for modifying HTTP request headers, response headers, and cookies with local browser rules.";
+const breadcrumbItems = [
+  { name: "Home", href: "/" },
+  { name: "ModHeader Alternative", href: "/modheader-alternative" }
+];
 
 const comparisonRows = [
   {
@@ -121,13 +126,15 @@ const softwareJsonLd = {
   featureList: comparisonRows.map((row) => row.detail)
 };
 
+const breadcrumbJsonLd = createBreadcrumbJsonLd(breadcrumbItems);
+
 export default function ModHeaderAlternativePage() {
   return (
     <main className="legal-page comparison-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([softwareJsonLd, faqJsonLd])
+          __html: JSON.stringify([softwareJsonLd, faqJsonLd, breadcrumbJsonLd])
         }}
       />
       <nav className="nav" aria-label="Primary">
@@ -162,6 +169,9 @@ export default function ModHeaderAlternativePage() {
         </div>
       </nav>
 
+      <div className="shell">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
       <section className="comparison-hero shell">
         <div>
           <p className="eyebrow">ModHeader alternative</p>

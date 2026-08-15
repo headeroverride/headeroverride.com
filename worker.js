@@ -1,10 +1,30 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    let shouldRedirect = false;
 
     if (url.hostname === "www.headeroverride.com" || url.protocol !== "https:") {
       url.protocol = "https:";
       url.hostname = "headeroverride.com";
+      shouldRedirect = true;
+    }
+
+    if (url.pathname.endsWith("/index.html")) {
+      url.pathname = url.pathname.slice(0, -"/index.html".length) || "/";
+      shouldRedirect = true;
+    }
+
+    if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+      url.pathname = url.pathname.replace(/\/+$/, "");
+      shouldRedirect = true;
+    }
+
+    if (url.pathname === "/support") {
+      url.pathname = "/contact";
+      shouldRedirect = true;
+    }
+
+    if (shouldRedirect) {
       return Response.redirect(url.toString(), 301);
     }
 
@@ -33,9 +53,16 @@ export default {
       );
     }
 
-    if (markdownPath || markdownAssetPaths.has(normalizePath(url.pathname))) {
+    const normalizedPath = normalizePath(url.pathname);
+    const isMarkdownAsset = markdownAssetPaths.has(normalizedPath);
+    const isLlmsText =
+      normalizedPath === "/llms.txt" || normalizedPath === "/llms-full.txt";
+
+    if (markdownPath || isMarkdownAsset) {
       headers.set("Content-Type", "text/markdown; charset=utf-8");
       headers.set("X-Robots-Tag", "noindex, follow");
+    } else if (isLlmsText) {
+      headers.set("X-Robots-Tag", "googlebot: noindex");
     }
 
     const isMediaAsset =

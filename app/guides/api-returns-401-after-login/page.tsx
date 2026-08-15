@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import InstallButton from "../../InstallButton";
 import GuideDropdown from "../../GuideDropdown";
+import GuideArticleHeader, {
+  createGuideBreadcrumbJsonLd,
+  guideDateModified,
+  guideDatePublished
+} from "../GuideArticleHeader";
 
 const pageUrl = "https://headeroverride.com/guides/api-returns-401-after-login";
 const title = "Why Does My API Return 401 After Login?";
@@ -10,15 +15,6 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  keywords: [
-    "api returns 401 after login",
-    "debug API 401",
-    "401 unauthorized after login",
-    "authentication cookie debugging",
-    "bearer token debugging",
-    "modify request headers",
-    "browser API authentication"
-  ],
   alternates: {
     canonical: "/guides/api-returns-401-after-login"
   },
@@ -28,7 +24,8 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "Header Override",
     type: "article",
-    publishedTime: "2026-07-25",
+    publishedTime: guideDatePublished,
+    modifiedTime: guideDateModified,
     images: [
       {
         url: "/screenshots/feature-headers-1280x800.png",
@@ -51,8 +48,8 @@ const articleJsonLd = {
   "@type": "TechArticle",
   headline: title,
   description,
-  datePublished: "2026-07-25",
-  dateModified: "2026-07-25",
+  datePublished: guideDatePublished,
+  dateModified: guideDateModified,
   url: pageUrl,
   image: "https://headeroverride.com/screenshots/feature-headers-1280x800.png",
   author: {
@@ -69,6 +66,8 @@ const articleJsonLd = {
     }
   }
 };
+
+const breadcrumbJsonLd = createGuideBreadcrumbJsonLd(title, pageUrl);
 
 function GuideNav() {
   return (
@@ -93,16 +92,18 @@ export default function ApiReturns401AfterLoginPage() {
     <main className="legal-page guide-page">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([articleJsonLd, breadcrumbJsonLd]) }}
       />
       <GuideNav />
 
       <article className="guide-article shell">
-        <header className="guide-article-header">
-          <p className="eyebrow">Authentication &amp; Cookies · 8 min read</p>
-          <h1>{title}</h1>
-          <p className="guide-lede">{description}</p>
-        </header>
+        <GuideArticleHeader
+          category="Authentication & Cookies"
+          description={description}
+          pageUrl={pageUrl}
+          readTime="8 min read"
+          title={title}
+        />
 
         <div className="guide-layout">
           <aside className="guide-aside">

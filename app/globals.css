@@ -1054,14 +1054,61 @@ h3 {
   padding-bottom: 84px;
 }
 
+.breadcrumbs {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+  color: var(--line-strong);
+}
+
+.breadcrumbs a {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .guide-article-header {
   max-width: 900px;
-  padding: 38px 0 54px;
+  padding: 24px 0 54px;
 }
 
 .guide-article-header h1 {
   max-width: 900px;
   font-size: clamp(32px, 4.2vw, 52px);
+}
+
+.guide-byline {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.guide-byline a {
+  color: var(--accent-dark);
+  font-weight: 700;
 }
 
 .guide-layout {

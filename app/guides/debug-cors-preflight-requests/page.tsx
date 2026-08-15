@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import InstallButton from "../../InstallButton";
 import GuideDropdown from "../../GuideDropdown";
+import GuideArticleHeader, {
+  createGuideBreadcrumbJsonLd,
+  guideDateModified,
+  guideDatePublished
+} from "../GuideArticleHeader";
 
 const pageUrl = "https://headeroverride.com/guides/debug-cors-preflight-requests";
 const title = "How to Debug CORS Preflight Requests";
@@ -10,12 +15,12 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ["debug CORS preflight requests", "CORS preflight debugging", "OPTIONS request CORS", "allowed headers CORS", "CORS credentials debugging", "modify request headers for CORS testing"],
   alternates: { canonical: "/guides/debug-cors-preflight-requests" },
   openGraph: {
     title: `${title} | Header Override`, description, url: pageUrl,
     siteName: "Header Override", type: "article",
-    publishedTime: "2026-07-25",
+    publishedTime: guideDatePublished,
+    modifiedTime: guideDateModified,
     images: [{ url: "/screenshots/feature-headers-1280x800.png", width: 1280, height: 800, alt: "Header Override request and response header rules" }]
   },
   twitter: { card: "summary_large_image", title: `${title} | Header Override`, description, images: ["/screenshots/feature-headers-1280x800.png"] }
@@ -23,11 +28,13 @@ export const metadata: Metadata = {
 
 const articleJsonLd = {
   "@context": "https://schema.org", "@type": "TechArticle", headline: title, description,
-  datePublished: "2026-07-25", dateModified: "2026-07-25", url: pageUrl,
+  datePublished: guideDatePublished, dateModified: guideDateModified, url: pageUrl,
   image: "https://headeroverride.com/screenshots/feature-headers-1280x800.png",
   author: { "@type": "Organization", name: "Header Override", url: "https://headeroverride.com" },
   publisher: { "@type": "Organization", name: "Header Override", logo: { "@type": "ImageObject", url: "https://headeroverride.com/icons/icon-128.png" } }
 };
+
+const breadcrumbJsonLd = createGuideBreadcrumbJsonLd(title, pageUrl);
 
 function GuideNav() {
   return (
@@ -48,10 +55,10 @@ function GuideNav() {
 export default function DebugCorsPreflightRequestsPage() {
   return (
     <main className="legal-page guide-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleJsonLd, breadcrumbJsonLd]) }} />
       <GuideNav />
       <article className="guide-article shell">
-        <header className="guide-article-header"><p className="eyebrow">CORS &amp; APIs · 6 min read</p><h1>{title}</h1><p className="guide-lede">{description}</p></header>
+        <GuideArticleHeader category="CORS & APIs" description={description} pageUrl={pageUrl} readTime="6 min read" title={title} />
         <div className="guide-layout">
           <aside className="guide-aside"><p className="guide-aside-label">On this page</p><a href="#preflight">What preflight does</a><a href="#checklist">Debugging checklist</a><a href="#override">Where Header Override helps</a></aside>
           <div className="guide-content">

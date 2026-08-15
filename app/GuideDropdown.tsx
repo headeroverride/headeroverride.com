@@ -43,6 +43,7 @@ export default function GuideDropdown() {
         Guides <span className="nav-chevron" aria-hidden="true" />
       </button>
       <div className="nav-dropdown-panel">
+        <a href="/guides">All guides</a>
         {guides.map(([href, label]) => (
           <a key={href} href={href}>
             {label}

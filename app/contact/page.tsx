@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import Breadcrumbs, { createBreadcrumbJsonLd } from "../Breadcrumbs";
 import GuideDropdown from "../GuideDropdown";
 
 const githubUrl = "https://github.com/headeroverride/headeroverride";
 const linkedInUrl =
   "https://www.linkedin.com/in/orest-kreminskyi-33852065/";
 const youtubeUrl = "https://www.youtube.com/@HeaderOverrideExtension";
+const breadcrumbItems = [
+  { name: "Home", href: "/" },
+  { name: "Contact", href: "/contact" }
+];
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -58,12 +63,14 @@ const contactJsonLd = {
     "Contact page for Header Override, a browser extension for modifying HTTP headers and cookies with local rules."
 };
 
+const breadcrumbJsonLd = createBreadcrumbJsonLd(breadcrumbItems);
+
 export default function ContactPage() {
   return (
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([contactJsonLd, breadcrumbJsonLd]) }}
       />
       <section className="legal-page shell">
         <nav className="legal-nav" aria-label="Primary">
@@ -98,6 +105,7 @@ export default function ContactPage() {
           </div>
         </nav>
 
+        <Breadcrumbs items={breadcrumbItems} />
         <p className="eyebrow">Contact</p>
         <h1 className="support-title">Contact Header Override</h1>
         <p className="support-contact-copy">
