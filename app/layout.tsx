@@ -32,8 +32,24 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "/icons/icon-128.png",
-    apple: "/icons/icon-128.png"
+    icon: [
+      {
+        url: "/icons/icon-96.png",
+        type: "image/png",
+        sizes: "96x96"
+      },
+      {
+        url: "/icons/icon-128.png",
+        type: "image/png",
+        sizes: "128x128"
+      }
+    ],
+    shortcut: "/favicon.ico",
+    apple: {
+      url: "/icons/icon-128.png",
+      type: "image/png",
+      sizes: "128x128"
+    }
   },
   manifest: "/manifest.webmanifest",
   referrer: "origin-when-cross-origin",
